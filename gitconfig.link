@@ -1,0 +1,56 @@
+[user]
+    name = Nils Leonhardt
+    email = nils@n11t.de
+
+[alias]
+    alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'
+    autoadd = !git add -u && git status
+    br = branch -v
+    branches = branch -a --verbose
+    ci = commit -v
+    co = checkout
+    changes = diff --staged
+    dc = diff --cached
+    diffhead = diff HEAD^
+    ff = merge --ff-only
+    fork = checkout -b
+    forkMaster = !git checkout master && git pull && git checkout -b
+    graph = log --graph --decorate --oneline
+    history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
+    incoming = !git inspect origin/HEAD ^HEAD
+    inspect = log --stat
+    ir = rebase -i --autosquash
+    map = !git graph --all
+    merge-test = "!f() { git merge --no-commit --no-ff $1 && git merge --abort; }; f"
+    recent = log --oneline -n 10
+    recommit = !git ci --amend --reuse-message=HEAD
+    restore = reset --hard
+    softdiff = diff --ignore-space-changes
+    show-merged = branch -a --merged
+    show-merged-local = branch -l --merged
+    show-merged-remote = branch -r --merged
+    show-unmerged = branch -a --no-merged
+    show-unmerged-local = branch -l --no-merged
+    show-unmerged-remote = branch -r --no-merged
+    st = status
+    unstage = reset HEAD
+    update = remote update --prune
+
+[core]
+    attributesfile = ~/.gitattributes
+    excludesfile = ~/.gitignore
+    fsyncobjectfiles = yes
+
+[color]
+    ui = auto
+
+[diff]
+    renamelimit = 0
+
+[pack]
+    threads = 0
+
+[push]
+    default = upstream
+
+# vim:set ft=gitconfig noet sw=8 ts=8:

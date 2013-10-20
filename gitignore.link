@@ -1,0 +1,60 @@
+##
+## PHP files
+##
+.idea/
+composer.phar
+
+##
+## OCaml compiled files
+##
+*.cma
+*.cmi
+*.cmo
+*.cmx
+*.cmxa
+*.cmxs
+
+##
+## Object files
+##
+*.a
+*.o
+
+##
+## Backup files
+##
+.*.swp
+*~
+*.bak
+
+##
+## TeX generated files
+##
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.thm
+
+##
+## OS X special files
+##
+.DS_Store
+
+##
+## Subversion directories
+##
+.svn
+
+##
+## Python files
+##
+*.pyc
+
+##
+## VIM help tags
+##
+doc/tags
