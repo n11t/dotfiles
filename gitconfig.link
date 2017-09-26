@@ -11,6 +11,7 @@
     co = checkout
     changes = diff --staged
     dc = diff --cached
+    delete-merged = "!f() { git branch --merged | grep -v '*' | xargs -n 1 git branch -d; }; f"
     diffhead = diff HEAD^
     ff = merge --ff-only
     fork = checkout -b
