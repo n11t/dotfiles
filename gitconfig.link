@@ -33,7 +33,7 @@
     show-unmerged = branch -a --no-merged
     show-unmerged-local = branch -l --no-merged
     show-unmerged-remote = branch -r --no-merged
-    st = status
+    st = status -s
     unstage = reset HEAD
     update = remote update --prune
 
