@@ -21,20 +21,12 @@
     graph = log --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
     incoming = !git inspect origin/HEAD ^HEAD
-    inspect = log --stat
     ir = rebase -i --autosquash
     map = !git graph --all
     merge-test = "!f() { git merge --no-commit --no-ff $1 && git merge --abort; }; f"
     recent = log --oneline -n 10
     recommit = !git ci --amend --reuse-message=HEAD
-    restore = reset --hard
     softdiff = diff --ignore-space-changes
-    show-merged = branch -a --merged
-    show-merged-local = branch -l --merged
-    show-merged-remote = branch -r --merged
-    show-unmerged = branch -a --no-merged
-    show-unmerged-local = branch -l --no-merged
-    show-unmerged-remote = branch -r --no-merged
     st = status -s
     unstage = reset HEAD
     update = remote update --prune
