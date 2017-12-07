@@ -17,6 +17,7 @@
     ff = merge --ff-only
     fork = checkout -b
     forkMaster = !git checkout master && git pull && git checkout -b
+    fuck = reset HEAD --hard
     graph = log --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
     incoming = !git inspect origin/HEAD ^HEAD
