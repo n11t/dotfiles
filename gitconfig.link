@@ -6,6 +6,7 @@
     alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'
     autoadd = !git add -u && git status
     br = branch -v
+    bra = !git for-each-ref --sort=committerdate --format='%(refname:short) * %(authorname) * %(committerdate:relative)' refs/remotes/ | column -t -s '*'
     branches = branch -a --verbose
     ci = commit -v
     co = checkout
